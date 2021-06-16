@@ -1,0 +1,130 @@
+{
+  "defaultSeverity": "error",
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "max-nesting-depth": 6,
+    "selector-max-compound-selectors": 4,
+    "selector-no-qualifying-type": null,
+    "selector-pseudo-class-no-unknown": null,
+    "selector-pseudo-element-no-unknown": null,
+    "function-parentheses-space-inside": null,
+    "scss/dollar-variable-pattern": null,
+    "order/order": [
+      "dollar-variables",
+      "custom-properties",
+      "at-rules",
+      "declarations",
+      "rules",
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": true
+      }
+    ],
+    "order/properties-order": [
+      [
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        {
+          "groupName": "Box model",
+          "emptyLineBefore": "threshold",
+          "noEmptyLineBetween": true,
+          "properties": [
+            "display",
+            "align-items",
+            "justify-content",
+            "flex-flow",
+            "flex-wrap",
+            "flex-direction",
+            "flex",
+            "height",
+            "width",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left",
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "min-height",
+            "min-width",
+            "max-height",
+            "max-width"
+          ]
+        },
+        {
+          "groupName": "Border and Box",
+          "emptyLineBefore": "threshold",
+          "noEmptyLineBetween": true,
+          "properties": [
+            "box-shadow",
+            "border",
+            "border-radius",
+            "border-width",
+            "border-style",
+            "border-color",
+            "border-top",
+            "border-top-color",
+            "border-top-left-radius",
+            "border-top-right-radius",
+            "border-top-style",
+            "border-top-width",
+            "border-right",
+            "border-right-color",
+            "border-right-style",
+            "border-right-width",
+            "border-bottom",
+            "border-bottom-color",
+            "border-bottom-left-radius",
+            "border-bottom-right-radius",
+            "border-bottom-style",
+            "border-bottom-width",
+            "border-left",
+            "border-left-color",
+            "border-left-style",
+            "border-left-width",
+            "border-image",
+            "border-image-outset",
+            "border-image-repeat",
+            "border-image-slice",
+            "border-image-source",
+            "border-image-width"
+          ]
+        },
+        {
+          "groupName": "font",
+          "emptyLineBefore": "threshold",
+          "properties": [
+            "font-family",
+            "font-size",
+            "line-height",
+            "font-weight",
+            "text-decoration",
+            "text-align",
+            "font-style",
+            "color",
+            word-break,
+            hyphens
+          ]
+        }
+      ],
+      {
+        "unspecified": "bottom",
+        "emptyLineBeforeUnspecified": "threshold",
+        "emptyLineMinimumPropertyThreshold": 5
+      }
+    ],
+    "order/properties-alphabetical-order": null,
+    "string-quotes": "single"
+  },
+  "plugins": [
+    "stylelint-order"
+  ]
+}

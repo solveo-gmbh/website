@@ -1,0 +1,25 @@
+{
+  "name": "@solveo/website",
+  "version": "1.0.0",
+  "description": "Public solveo GmbH website",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "format:test": "prettier --list-different \"./assets/**/*.{js,ts,html,css,scss,json}\"",
+    "format:write": "stylelint \"./assets/**/*.{css,scss}\" --fix && prettier --write \"./assets/**/*.{js,ts,html,css,scss,json}\""
+  },
+  "author": "@tomastrajan",
+  "license": "Copyright solveo GmbH",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solveo-gmbh/website.git"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "husky": "^6.0.0",
+    "prettier": "^2.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-order": "^4.1.0"
+  }
+}
